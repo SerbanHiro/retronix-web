@@ -1,0 +1,390 @@
+
+@import url('../css/fonts.css');
+
+html,body{
+    margin:0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    z-index: 1;
+    background-color:#0F2822;
+}
+
+  /* Retronix Custom Scrollbar (desi e usor de facut) */
+  /* Firefox */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #1B6047 #0F2822;
+  }
+  
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  *::-webkit-scrollbar-track {
+    background: #0F2822;
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background-color: #1B6047;
+    border-radius: 20px;
+    border: 3px solid #0F2822;
+  }
+  /* Retronix Custom Scrollbar (desi e usor de facut) */
+
+#particles-js{
+   position: absolute;
+   width: 100%;
+   height: 210.4vh;
+   z-index: 0
+  }
+:root{
+    /* theme colors */
+    --text-gray: #3f4954;
+    --text-light: #686666da;
+    --bg-color: #0f0f0f;
+    --white: #ffffff;
+    --midnight: #104f55;
+
+    /* gradient color */
+    --sky: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+
+    /* theme font-family */
+    --Abel:'Abel',cursive;
+    --Anton:'Anton',cursive;
+    --Arvo:'Arvo',cursive;
+    --Josefin:'Josefin',cursive;
+    --Lexend:'Lexend',cursive;
+    --Livvic:'Livvic',cursive;
+}
+
+/*---------------- Global Classes ----------------*/
+
+a{
+    text-decoration: none;
+    color:var(--white);
+}
+
+.flex-row{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    color:var(--text-gray);
+}
+
+ul{
+    list-style-type: none;
+}
+
+/* Type writing animation */
+h1{
+    font-family: var(--Lexend);
+    font-size: 2.5rem;
+}
+  .typer{
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typewriter;
+    display: inline-block;
+    position: relative;
+    border-right: .10em solid white;
+    animation-duration: 10s;
+    animation-timing-function: steps(30, end);
+    animation-iteration-count: infinite;
+  }
+  .typer::after {
+    animation: caret infinite;
+    animation-duration: 1s;
+    animation-timing-function: steps(1, end);
+  }
+/* Type writing animation */
+
+h2{
+    font-family:var(--Lexend);
+}
+
+h3{
+    font-family:var(--Abel);
+    font-size: 1.3rem;
+}
+button.btn{
+    border:none;
+    border-radius: 2rem;
+    padding: 1rem 3rem;
+    font-size: 1rem;
+    font-family: var(--Livvic);
+    cursor: pointer;
+}
+
+span{
+    font-family: var(--Abel);
+}
+
+.container{
+    margin: 0 5vw;
+}
+
+/*---------------- Global Classes ----------------*/
+
+/* ---------------- navbar ----------------*/
+
+.nav{
+    background: #0F2722;
+    padding:0.5rem 2rem;
+    height: 0;
+    /* posibila schimbare height:0 min-height: 8vh*/
+    min-height: 8vh;
+    overflow: hidden;
+    transition: height 1s ease-in-out;
+    justify-content: center;
+    z-index:1;
+}
+
+.nav .nav-menu{
+    justify-content: space-between;
+}
+
+.nav .toggle-collapse{
+    position: absolute;
+    top:0%;
+    width:90%;
+    cursor: pointer;
+    display:none;
+}
+
+.nav .toggle-collapse .toggle-icons{
+    display:flex;
+    justify-content: flex-end;
+    padding:1.7rem 0;
+}
+
+.nav .toggle-collapse .toggle-icons i{
+    font-size:1.4rem;
+    color:var(--white);
+}
+
+.collapse{
+    height:30rem; 
+}
+
+.nav .nav-items{
+    display:flex;
+    margin:0 3.5rem 0 0;
+}
+
+.nav .nav-items .nav-link{
+    padding: 1.75rem 1rem;
+    font-size: 1.1rem;
+    position: relative;
+    font-family: var(--Lexend);
+    font-size: 1.1rem;
+}
+
+.nav .nav-items .nav-link:hover{
+    background-color: rgba(16,79,85,0.6);
+}
+
+.nav .nav-items .nav-link:hover a{
+    color:var(--white);
+}
+
+.nav .nav-brand a{
+    font-size:1.6rem;
+    padding: 1.4rem 0;
+    display: block;
+    font-family: var(--Lexend);
+    font-size:1.6rem;
+}
+
+.nav .social{
+    z-index: 1; /* Click over particles*/
+    padding: 1.75rem 0.2rem;
+}
+
+.nav .social i{
+    padding: 0.2em;
+}
+
+.nav .social i:hover{
+    color: #a1c4fd;
+}
+/* ---------------- navbar ----------------*/
+
+/*---------------- Main Content ----------------*/
+
+
+/*---------------- Site title ----------------*/
+
+main{
+    background-color:#0F2722;
+}
+main .site-title{
+    /**background: url('../assets/Background-Image.jpg');*/
+    background: url('../assets/Background_img_1.png');
+    background-size: cover;
+    height:110vh;
+    display:flex;
+    justify-content: center;
+}
+
+main .site-title .site-background{
+    padding-top: 8rem;
+    text-align: center;
+    color: var(--white);
+    z-index: 9999;
+}
+
+main .site-title h1,h3{
+    margin: 0.3rem;
+}
+
+/* Retronix logo */
+main .site-title .retronix_logo{
+    /*No selection needed*/
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    /*No selection needed*/
+    padding: 1rem 7.5rem;
+    width:15.5rem;
+    display:flex;
+    animation: mover 2s infinite alternate;
+}
+/* Retronix logo */
+
+main .site-title .btn{
+    margin: 1.8rem;
+    background: #38A260;
+}
+
+main .site-title .btn:hover{
+    background: transparent;
+    border: 1px solid var(--white);
+    color: var(--white);
+}
+
+/*---------------- Site title ----------------*/
+
+/*---------------- Retronix Carousel ----------------*/
+
+main .blog{
+    background: url('../assets/Moon_section2_background.png');
+    background-repeat: no-repeat;
+    background-position: right;
+    height: 100vh;
+    width:100%;
+    background-size:65%;
+}
+
+main .blog .blog-post{
+    padding-top: 6rem;
+}
+main .blog-post .blog-content{
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+    width:80%;
+    margin: 1rem 2rem;
+    box-shadow: 0 15px 20px rgba(27, 96, 71, 0.2);
+}
+
+main .blog-post .blog-content{
+    color:white;
+    padding: 2rem 0;
+}
+
+main .blog-content .btn-blog{
+    padding: 0.7rem 3rem;
+    background: var(--sky);
+    margin: 0.5rem;
+}
+
+main .blog-content span{
+    display:block;
+}
+
+section .container .owl-nav{
+    position:absolute;
+    top:0%;
+    margin: 0 auto;
+    width:100%;
+}
+
+/**.owl-nav .owl-prev .owl-nav-prev i,
+.owl-nav .owl-next .owl-nav-next i{
+    color:var(--text-gray);
+    background:transparent;
+    font-size:2rem;
+}
+
+.owl-theme .owl-nav [class*='owl-']:hover{
+    background:transparent;
+    color:var(--text-gray);
+}*/
+
+
+
+/*---------------- Retronix Carousel ----------------*/
+
+/*---------------- Main Content ----------------*/
+
+/* Viewport pt alte device uri mai mici decat 750px */
+@media only screen and (max-width: 463px)
+{
+    h1{
+        font-size: 8vw;
+       }
+}
+@media only screen and (max-width: 813px){
+   .nav .nav-menu, .nav .nav-items{
+       flex-direction: column;
+   }
+   
+   .nav .toggle-collapse{
+       display:initial;
+   }
+   /*Ora 2 dim, asta e ultimul update*/
+   .nav .nav-items .nav-link{
+    padding: 1.6rem 0rem;
+   }
+
+   .nav .social{
+    padding: 1.4rem 0;
+    }
+
+    .nav .nav-brand a{
+        font-size:1.6rem;
+        padding: 0.6rem 0;
+    }
+    /*Ora 2 dim, asta e ultimul update*/
+
+   /* Retronix logo */
+   main .site-title .retronix_logo{
+       width:12rem;
+   }
+   /* Retronix logo */
+}
+
+/* Viewport pt alte device uri */
+@keyframes mover{
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-20px);}
+}
+@keyframes typewriter {
+    0%, 100% {
+      width: 0;
+    }
+    20%, 80% {
+      width: 10.2em;
+    }
+  }
+  @keyframes caret {
+    0%, 100% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
